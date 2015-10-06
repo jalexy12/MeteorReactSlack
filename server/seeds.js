@@ -2,9 +2,12 @@ if (Meteor.isServer){
   Meteor.startup(() => {
     Factory.define('message', Messages, {
       text: function() {
-          return Fake.sentence()
-      }
-    })
+          return Fake.sentence();
+      },
+      user: Meteor.users.findOne()._id,
+      timestamp: Date.now(),
+      channel: 'general'
+    });
     Messages.remove({});
 
     if (Messages.find({}).count() === 0) {
@@ -12,5 +15,12 @@ if (Meteor.isServer){
         Factory.create('message');
       });
     }
+    Channels.remove({});
+    Channels.insert({
+      name: "general"
+    });
+    Channels.insert({
+      name: "random"
+    });
   })
 }

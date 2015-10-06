@@ -3,11 +3,7 @@ MessageBox = React.createClass({
       event.preventDefault()
       let messageText = React.findDOMNode(this.refs.messageInput).value.trim()
       if (!!messageText){
-        Messages.insert(
-                        { text: messageText,
-                          user: Meteor.userId(),
-                          timestamp: Date.now()
-                         })
+        Meteor.call('newMessage', {text: messageText} )
       }
       React.findDOMNode(this.refs.messageInput).value = ""
     },

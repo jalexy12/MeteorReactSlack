@@ -23,3 +23,5 @@ kadira:flow-router
 kadira:react-layout
 anti:fake
 dburles:factory
+accounts-ui
+accounts-password

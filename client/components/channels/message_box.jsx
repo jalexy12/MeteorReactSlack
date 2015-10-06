@@ -1,8 +1,10 @@
 MessageBox = React.createClass({
     submitMessage(event){
       event.preventDefault()
-      let input = React.findDOMNode(this.refs.messageInput).value.trim()
-      //Todo add new message
+      let messageText = React.findDOMNode(this.refs.messageInput).value.trim()
+      if (!!messageText){
+        Messages.insert({ text: messageText })
+      }
       React.findDOMNode(this.refs.messageInput).value = ""
     },
 

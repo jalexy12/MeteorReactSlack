@@ -1,10 +1,12 @@
-messages = [
-  {userName: "Jalexy", timeStamp: "1:31", content: "Sup bro"},
-  {userName: "Test Testly", timeStamp: "1:32", content: "Sup bro"},
-  {userName: "Fak", timeStamp: "1:33", content: "Sup bro"},
-  {userName: "Jalexy", timeStamp: "1:34", content: "Sup bro"},
-]
 ChatLayout = React.createClass({
+  mixins: [ReactMeteorData],
+
+  getMeteorData(){
+    return {
+      messages: Messages.find({}).fetch()
+    }
+  },
+
   render(){
     return (
     <div>
@@ -14,7 +16,7 @@ ChatLayout = React.createClass({
         </div>
         <div className="main">
            <Listings />
-           <MessageHistory messages={messages}/>
+           <MessageHistory messages={this.data.messages}/>
         </div>
          <div className="footer">
              <UserMenu user={{userName: "jalexy12", onlineStatus: "online"}} />

@@ -25,3 +25,5 @@ anti:fake
 dburles:factory
 accounts-ui
 accounts-password
+accounts-base
+email

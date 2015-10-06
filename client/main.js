@@ -1,4 +1,8 @@
 if (Meteor.isClient) {
+  Accounts.ui.config({
+    passwordSignupFields: 'USERNAME_AND_EMAIL'
+  });
+
   Meteor.startup(() => {
     WebFontConfig = {
         google: { families: [ 'Lato:400,700,400italic:latin' ] }

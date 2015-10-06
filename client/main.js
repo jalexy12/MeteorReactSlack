@@ -2,10 +2,11 @@ if (Meteor.isClient) {
   Accounts.ui.config({
     passwordSignupFields: 'USERNAME_AND_EMAIL'
   });
-  Meteor.subscribe('messages');
-  Meteor.subscribe('allUsernames');
-
+  Meteor.subscribe('messages')
+  Meteor.subscribe('allUsernames')
+  Meteor.subscribe('channels')
   Meteor.startup(() => {
+    Session.set('channel', 'general');
     WebFontConfig = {
         google: { families: [ 'Lato:400,700,400italic:latin' ] }
       };

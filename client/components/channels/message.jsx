@@ -1,6 +1,5 @@
 Message = React.createClass({
   render: function() {
-    console.log(this.props.message)
     return (
       <div className="message">
           <a href="" className="message_profile-pic"></a>

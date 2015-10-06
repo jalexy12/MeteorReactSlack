@@ -17,12 +17,7 @@ ChatLayout = React.createClass({
            <MessageHistory messages={messages}/>
         </div>
          <div className="footer">
-             <div className="user-menu">
-                 <span className="user-menu_profile-pic"></span>
-                 <span className="user-menu_username">danyll</span>
-                 <img className="connection_icon" src="data:image/png;base64,iVBORw0KGgoAAAAN..." />
-                 <span className="connection_status">online</span>
-             </div>
+             <UserMenu user={{userName: "jalexy12", onlineStatus: "online"}} />
              <MessageBox />
          </div>
        </div>

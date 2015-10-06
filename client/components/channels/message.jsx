@@ -6,7 +6,7 @@ Message = React.createClass({
           <a href="" className="message_username">{this.props.message.userName}</a>
           <span className="message_timestamp">{this.props.message.timeStamp}</span>
           <span className="message_star"></span>
-          <span className="message_content">{this.props.message.text}</span>
+          <span className="message_content">{this.props.message.text  }</span>
       </div>
     );
   }

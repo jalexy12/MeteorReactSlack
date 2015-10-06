@@ -2,6 +2,8 @@ if (Meteor.isClient) {
   Accounts.ui.config({
     passwordSignupFields: 'USERNAME_AND_EMAIL'
   });
+  Meteor.subscribe('messages');
+  Meteor.subscribe('allUsernames');
 
   Meteor.startup(() => {
     WebFontConfig = {

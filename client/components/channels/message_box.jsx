@@ -1,12 +1,21 @@
 MessageBox = React.createClass({
-    render: function() {
+    submitMessage(event){
+      event.preventDefault()
+      let input = React.findDOMNode(this.refs.messageInput).value.trim()
+      //Todo add new message
+      React.findDOMNode(this.refs.messageInput).value = ""
+    },
+
+    render() {
       return (
         <div className="input-box">
+          <form onSubmit={this.submitMessage}>
             <input
               type="text"
               className="input-box_text"
-              ref="message-input"
-              onSubmit={this.submitMessage}/>
+              ref="messageInput"
+              />
+          </form>
         </div>
       );
     }

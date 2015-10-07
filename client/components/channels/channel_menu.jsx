@@ -9,7 +9,8 @@ ChannelMenu = React.createClass({
 
   renderChannels(){
     return this.data.channels.map((channel) => {
-      return <Channel channel={channel} />
+      let active = this.props.channel === channel.name
+      return <Channel channel={channel} active={active}/>
     })
   },
 

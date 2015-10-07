@@ -121,12 +121,11 @@ body {
   font-weight: 900;
   padding: 0 1rem;
   color: #ffffff;
-  background: #3e313c;
+  background: #4d394b;
   border-bottom: 2px solid #372c36;
   float: left;
   cursor: pointer;
 }
-
 /* line 19, ../tests/sass/components/_header.scss */
 .channel-menu_name {
   display: inline-block;
@@ -151,7 +150,7 @@ body {
   width: 220px;
   float: left;
   color: #ab9ba9;
-  background-color: #3e313c;
+  background-color: #4d394b;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -203,6 +202,11 @@ body {
   margin-right: 17px;
   color: #ffffff;
   padding-left: 1rem;
+}
+
+.channel:hover {
+  cursor: pointer;
+  background: #3e313c;
 }
 
 /* line 35, ../tests/sass/components/_listings.scss */

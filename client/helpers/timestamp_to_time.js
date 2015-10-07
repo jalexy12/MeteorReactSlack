@@ -1,5 +1,4 @@
 timeStampToTime = function (timestamp) {
-    console.log(timestamp)
     var date = new Date(timestamp)
     var hours = date.getHours()
     var minutes = "0" + date.getMinutes()

@@ -6,7 +6,7 @@ if (Meteor.isClient) {
   Meteor.subscribe('allUsernames')
   Meteor.subscribe('channels')
   Meteor.startup(() => {
-    Session.set('channel', 'general');
+    Session.set('channel', 'general')
     WebFontConfig = {
         google: { families: [ 'Lato:400,700,400italic:latin' ] }
       };
